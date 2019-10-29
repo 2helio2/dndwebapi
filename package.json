@@ -1,0 +1,19 @@
+{
+  "name": "dnddomain",
+  "version": "1.0.0",
+  "description": "servidor pasamano de objetos dto a una aplicacion web",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "test-server",
+    "dev": "node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "memory-cache": "^0.2.0"
+  }
+}
