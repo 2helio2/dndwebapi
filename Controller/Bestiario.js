@@ -1,5 +1,6 @@
 const Bestiario = require('../Model/Bestiario.js')
 const cache = require('memory-cache');
+const Utils = require('../Utils.js');
 
 module.exports = class BestiarioController {
     constructor(app) {
@@ -21,7 +22,7 @@ module.exports = class BestiarioController {
                 });
     
                 Promise.all(monsterPromises).then((responses) => {
-                    cache.put(key, responses, 10000);
+                    cache.put(key, responses, Utils.cacheTime(1));
                     res.send(JSON.stringify(responses));
                 });
             }            

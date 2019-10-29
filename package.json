@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "test-server",
-    "dev": "node ."
+    "dev": "node .",
+    "start": "node ."
   },
   "author": "",
   "license": "ISC",

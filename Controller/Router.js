@@ -13,7 +13,12 @@ module.exports = class Router {
     getMonster() {
         this.app.get('/monsters/:id', (req, res) => {
             const monsterController = new MonstersController();
-            monsterController.initialize(res, req.params);
+            monsterController.initialize(res, req);
+        });
+
+        this.app.get('/monsters/:id/:content', (req, res) => {
+            const monsterController = new MonstersController();
+            monsterController.initialize(res, req);
         });
 
         this.app.get('/bestiario/:from-:to', (req, res) => {
